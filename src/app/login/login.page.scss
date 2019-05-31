@@ -1,0 +1,14 @@
+ion-toolbar{
+    --background:#15202bf5;
+    .justify-content-center{
+        align-items: center;
+
+        strong{
+            position: absolute ;
+            right:13%;
+        }
+    }
+}
+ion-content{
+    --ion-background-color:#15202b;
+}

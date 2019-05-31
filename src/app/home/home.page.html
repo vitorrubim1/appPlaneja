@@ -1,45 +1,26 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Planejamento Financeiro
-    </ion-title>
-    <ion-buttons slot="primary">
-      <ion-button [routerLink]='["/novo-planejamento"]' color="danger">
-        <ion-icon slot='end' name='add'> </ion-icon>
-      </ion-button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content padding>
-<h2> Crie um novo Planejamento </h2>
-<br/>
-<br/>
 
-<div *ngIf="planejamentos.length > 0"> 
-  <h2> Planejamentos </h2>
-  <div *ngFor="let planejamento of planejamentos">
-    <ion-card (click)="novo-planejamento() "> 
-        <ion-card-content>
-            <h2>
-              {{planejamento.nome}}
-            </h2>
-            <h2>
-              {{planejamento.custo}}
-            </h2>
-            <h2>
-              {{planejamento.faturamento}}
-            </h2>
-            <p style="text-align: right" >
-              <ion-button color="danger" fill="outline" size="small" (click)="excluir(planejamento.nome)"> Excluir </ion-button>
-            </p>
-          </ion-card-content>
-    </ion-card>
-
+  <div class="justify-content-center">
+    <ion-icon name="logo-twitter" size='large' class='twitter-primary'></ion-icon>
   </div>
-</div>
-<div *ngIf="planejamentos.length === 0">
-    <h3> Ainda não há planejamentos cadastrados.</h3>
-    <ion-button color="danger" [routerLink]='["/novo-planejamento"]'> Cadastrar Agora    </ion-button>    
-</div>
+  <div class="vh-75">
+    <ion-row>
+      <ion-col size='8'>
+        <h2 class="home-title">Veja o que está acontecendo no mundo neste momento.</h2>
+      </ion-col>
+    </ion-row>
+
+    <ion-button shape="round">
+      Criar conta
+    </ion-button>
+  </div>
+  <div class="footer">
+    <p>
+      <small>
+        Já tem uma conta?
+        <ion-button fill='clear' [routerLink]='["/login"]'> Entrar </ion-button>
+      </small>
+    </p>
+  </div>
+
 </ion-content>
